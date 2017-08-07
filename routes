@@ -1,0 +1,16 @@
+ROOT = logged in ? < user menu > : < log in page >
+
+BASE ROUTES
+/{user} = user is logged in
+/auth = user is not logged in
+
+REST ROUTES
+/{user}/view/all-expense-reports = < reports list >
+/{user}/view/expense-report/{#} = < single expense report >
+/{user}/add/expense-report = < new expense report >
+/{user}/add/all-expense-reports = < editable reports list >
+/{user}/edit/expense-report/{#} = < edit expense report >
+
+USER PAGES
+/{user}/menu = < user menu >
+/{user}/complete = < completed action page >
