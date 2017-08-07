@@ -11,7 +11,10 @@ const AppContainer = () => {
   return (
     <div>
       <Redirect from='/' to={`/${user}`} />
-      <AuthRoute path={`/${user}`} component={UserMenu} />
+      <Switch>
+        <AuthRoute path={`/${user}`} component={UserMenu} />
+        <Route path='/unauthorized' component={Login} />
+      </Switch>
     </div>
   )
 }
