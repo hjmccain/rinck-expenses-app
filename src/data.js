@@ -44,22 +44,22 @@ export const receipts = [
   {
     id: 101,
     user: 1,
-    report: null
+    report: 1000
   },
   {
     id: 102,
     user: 2,
-    report: null
+    report: 1001
   },
   {
     id: 103,
     user: 2,
-    report: null
+    report: 1002
   },
   {
     id: 104,
     user: 2,
-    report: null
+    report: 1001
   },
   {
     id: 105,
