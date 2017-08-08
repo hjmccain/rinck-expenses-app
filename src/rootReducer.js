@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import receipts from './state/reducers/receipts';
+import test from './state/reducers/test';
 
 export default combineReducers({
-  receipts
+  test
 });
