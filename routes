@@ -14,3 +14,12 @@ REST ROUTES
 USER PAGES
 /{user}/menu = < user menu >
 /{user}/complete = < completed action page >
+
+
+TO DO:
+
+1. Add error handling (React 16)
+2. Integrate testing
+3. Add node back end
+4. Figure out database
+5. Continue building out functionality

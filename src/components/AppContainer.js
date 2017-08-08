@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { fetchAuth, fetchUsers, fetchReceipts, fetchReports } from '../state/actions/actionCreators';
 import { withRouter } from 'react-router-dom';
 
+import ErrorBoundary from './ErrorBoundary';
 import AuthRoute from './AuthRoute';
 import UserContainer from './authorized/UserContainer';
 import Login from './unauthorized/Login';
@@ -25,13 +26,13 @@ class AppContainer extends Component {
 
   render() {
     return (
-      <div>
+      <ErrorBoundary>
         <Redirect from={'/'} to={`/${authenticated.username}`} />
         <Switch>
           <AuthRoute path={`/${authenticated.username}`} component={UserContainer} />
           <Route path='/unauthorized' component={Login} />
         </Switch>
-      </div>
+      </ErrorBoundary>
     )
   }
 

@@ -3,16 +3,20 @@ import { Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
+import ErrorBoundary from './ErrorBoundary';
+
 const AuthRoute = (props) => {
 
   const { component: Component, auth, users, receipts, reports } = props;
 
   return (
-    <Route render={ props => (
-        auth.loggedIn
-        ? <Component { ...props } auth={auth} users={users} receipts={receipts} reports={reports} />
-        : <Redirect to='/unauthorized' />
-    )} />
+    <ErrorBoundary>
+      <Route render={ props => (
+          auth.loggedIn
+          ? <Component { ...props } auth={auth} users={users} receipts={receipts} reports={reports} />
+          : <Redirect to='/unauthorized' />
+      )} />
+    </ErrorBoundary>
   )
 
 }
