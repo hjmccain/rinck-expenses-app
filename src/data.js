@@ -33,7 +33,7 @@ export const users = [
     reports: [],
     receipts: [ 106 ],
     id: 4
-  },
+  }
 ]
 
 export const receipts = [
