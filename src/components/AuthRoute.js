@@ -7,13 +7,18 @@ import ErrorBoundary from './ErrorBoundary';
 
 const AuthRoute = (props) => {
 
-  const { component: Component, auth, users, receipts, reports } = props;
+  const { authComponent: Component, auth, users, receipts, reports, etc } = props;
 
   return (
     <ErrorBoundary>
       <Route render={ props => (
-          auth.loggedIn
-          ? <Component { ...props } auth={auth} users={users} receipts={receipts} reports={reports} />
+          auth.loggedIn ?
+            <Component { ...props }
+              auth={auth}
+              users={users}
+              receipts={receipts}
+              reports={reports}
+              etc={etc} />
           : <Redirect to='/unauthorized' />
       )} />
     </ErrorBoundary>

@@ -25,7 +25,8 @@ const AllExpenseReports = (props) => {
 
   return (
     <div>
-      <h3>Expense reports</h3>
+      <h3>Expense Reports</h3>
+      <button>New Report</button>
       <div>
         {eachReport(filtered(reports, userID), username)}
       </div>

@@ -29,7 +29,7 @@ class AppContainer extends Component {
       <ErrorBoundary>
         <Redirect from={'/'} to={`/${authenticated.username}`} />
         <Switch>
-          <AuthRoute path={`/${authenticated.username}`} component={UserContainer} />
+          <AuthRoute path={`/${authenticated.username}`} authComponent={UserContainer} />
           <Route path='/unauthorized' component={Login} />
         </Switch>
       </ErrorBoundary>
