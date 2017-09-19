@@ -1,32 +1,34 @@
 import React, { Component } from 'react';
 
+const editableText = (label, content) => {
+  return (
+    <div>
+      <span className="label">{label}</span>
+      <span
+        className="input"
+        contentEditable>{content}</span>
+    </div>
+  )
+}
+
 class UploadOrEditReceipt extends Component {
   // After component mounts, save contents of each input field in state.
   // On submit, (1) compare initial state with current contents; update if necessary.
   // (2) Update 'completed' status.
 
   render() {
-    const { receiptInfo } = this.props;
+    const { receiptInfo, authClass } = this.props;
     return (
-      <div className={props.authClass} id="receipt-info-modal">
-        <form>
-          <div>
-            <span>Date:</span>
-            <span contentEditable>{receiptInfo ? receiptInfo.date : null}</span>
+      <div className={authClass} id="receipt-info-modal">
+        <form id="add-edit-receipt">
+          {editableText('Date:', receiptInfo ? receiptInfo.date : null)}
+          {editableText('Place of Purchase::', receiptInfo ? receiptInfo.placeOfPurchase : null)}
+          {editableText('Amount:', receiptInfo ? receiptInfo.amount : null)}
+          <div className="upload-label">
+            Add Receipt
           </div>
-          <div>
-            <span>Place of Purchase:</span>
-            <span contentEditable>{receiptInfo ? receiptInfo.placeOfPurchase : null}</span>
-          </div>
-          <div>
-            <span>Amount:</span>
-            <span contentEditable>{receiptInfo ? receiptInfo.amount : null}</span>
-          </div>
-          <div>
-            <span>Add Receipt</span>
-          </div>
-          <div>
-            <span>View Receipts</span>
+          <div className="upload-label">
+            View Receipts
           </div>
         </form>
       </div>
