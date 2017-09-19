@@ -106,16 +106,22 @@ export const reports = [
   {
     id: 1000,
     user: 1,
-    receipts: [ 100, 101 ]
+    receipts: [ 100, 101 ],
+    reportEvent: 'WFF European conference',
+    date: '3-10-17'
   },
   {
     id: 1001,
     user: 2,
-    receipts: [ 102, 104 ]
+    receipts: [ 102, 104 ],
+    reportEvent: 'WFF European conference',
+    date: '3-10-17'
   },
   {
     id: 1002,
     user: 2,
-    receipts: [ 103 ]
+    receipts: [ 103 ],
+    reportEvent: 'DaVinci Puerto Rico',
+    date: '3-10-17'
   }
 ]

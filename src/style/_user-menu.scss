@@ -1,0 +1,28 @@
+#user-menu-container {
+
+  .user-menu-item {
+    margin-bottom: 25px;
+    &:hover {
+      .background {
+        background-color: #E2D21A;
+      }
+    }
+
+    .background {
+      background-color: #F8E71C;
+      width: 40%;
+      height: 38px;
+      margin-left: 8px;
+    }
+
+    .text {
+      font-family: $sansserif;
+      font-weight: 900;
+      font-size: 2.6em;
+      letter-spacing: 0.03em;
+      margin-top: -29px;
+    }
+
+  }
+
+}

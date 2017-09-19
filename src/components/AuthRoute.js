@@ -14,6 +14,7 @@ const AuthRoute = (props) => {
       <Route render={ props => (
           auth.loggedIn ?
             <Component { ...props }
+              authClass="authorized"
               auth={auth}
               users={users}
               receipts={receipts}

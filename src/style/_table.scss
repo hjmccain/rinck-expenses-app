@@ -1,0 +1,29 @@
+#expense-report-table {
+
+  th, td {
+    width: 260px;
+    font-family: $sansserif;
+    text-align: center;
+    padding: 10px;
+    vertical-align: middle;
+  }
+
+  td {
+    font-weight: 600;
+    font-size: 1.8em;
+  }
+
+  th {
+    font-weight: 900;
+    font-size: 2em;
+  }
+
+  .yellow-row {
+    background-color: $yellow;
+  }
+
+  .white-row {
+    background-color: $lightyellow;
+  }
+
+}

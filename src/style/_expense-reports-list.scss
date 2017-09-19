@@ -1,0 +1,25 @@
+#all-expense-reports-container {
+
+  .report-list {
+
+    .list-item > h4 {
+      width: 410px;
+      height: 65px;
+      background-color: #F8E71C;
+      font-family: $sansserif;
+      font-weight: 900;
+      font-size: 2em;
+      text-align: left;
+      padding-left: 15px;
+      margin-bottom: 22px;
+      &:hover {
+        background-color: #E2D21A;
+      }
+      &:visited {
+        color: inherit;
+      }
+    }
+
+  }
+
+}

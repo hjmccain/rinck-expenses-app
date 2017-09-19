@@ -10,8 +10,12 @@ export const getItems = (toFind, toSearch) => {
   })
 }
 
-export const listElements = (items, ComponentToRender) => {
-  return items.map(item => <ComponentToRender key={item.id} data={item} />)
+export const createDataTable = (items, ComponentToRender, cb) => {
+  return items.map((item, idx) => <ComponentToRender
+    key={item.id}
+    data={item}
+    cb={cb}
+    color={idx%2===0?'yellow-row':'white-row'} />)
 }
 
 export const getID = IDToFind => {
